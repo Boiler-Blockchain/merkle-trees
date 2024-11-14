@@ -1,0 +1,33 @@
+# Compiled binary
+main
+
+.vscode/
+main.dSYM/
+
+# Object files
+*.o
+
+# Dependency files
+*.d
+
+# Output files
+*.out
+
+# Compiled dynamic libraries
+*.so
+
+# Compiled static libraries
+*.a
+*.lib
+
+# Temporary files
+*.tmp
+
+# Logs and debug files
+*.log
+*.debug
+
+
+# Common system files
+.DS_Store
+Thumbs.db
