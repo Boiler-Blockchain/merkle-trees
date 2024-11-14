@@ -1,6 +1,6 @@
 # Merkle Tree Assignment
 
-This assignment focuses on building and understanding Merkle trees, an important data structure in blockchain technology. Students will implement core functions for creating and verifying Merkle proofs, which have applications in blockchain systems like airdrops, decentralized verification, and efficient data authentication.
+This assignment focuses on building and understanding [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree), an important data structure in blockchain technology. Students will implement core functions for creating and verifying Merkle proofs, which have applications in blockchain systems like airdrops, decentralized verification, and efficient data authentication.
 
 ## Why Merkle Trees?
 Merkle trees are used to validate data integrity and are essential in blockchain technology. They allow for efficient verification of data stored in large datasets, like transactions on the blockchain. Use cases include:
