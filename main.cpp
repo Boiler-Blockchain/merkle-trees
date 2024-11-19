@@ -1,5 +1,5 @@
 /**
- * @file merkle_tree.cpp
+ * @file main.cpp
  *
  * Boiler Blockchain Project - Merkle Tree Implementation
  *
