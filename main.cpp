@@ -113,10 +113,14 @@ MerkleNode *build_merkle_tree(vector<string> data_blocks)
  * Merkle proofs are needed to verify if a certain node is in the merkle tree
  * This is very useful in verifying if an element belongs to a pre-determined set in O(logn)
  * Example: Airdropping tokens to addresses
+ * 
+ * Note that we have a string and a bool for each element of the proof
+ * The string is the sibling hash, and the bool is to keep a track of whether the sibling is the left or the right sibling.
+ * This will be useful when you verify a leaf hash
  */
-vector<string> generate_merkle_proof(MerkleNode *root, MerkleNode *leaf)
+vector<pair<string, bool>>  generate_merkle_proof(MerkleNode *root, MerkleNode *leaf)
 {
-  vector<string> proof;
+  vector<pair<string, bool>>  proof;
   /*
    * 1. Traverse from leaf to root
    * 2. In the process, get the sibling's hash of each node and push it in the proof.
@@ -127,7 +131,7 @@ vector<string> generate_merkle_proof(MerkleNode *root, MerkleNode *leaf)
 /*
  * Merkle verification in O(logn time)
  */
-bool verify(MerkleNode *root, MerkleNode *leaf, vector<string>merkle_proof)
+bool verify(MerkleNode *root, MerkleNode *leaf, vector<pair<string, bool>> merkle_proof)
 {
   /*
   * 1. Traverse from leaf to root
