@@ -96,7 +96,7 @@ MerkleNode *build_merkle_tree(vector<string> data_blocks)
     // make a leaf node for each data block
     nodes.push_back(new MerkleNode(simple_hash(data_blocks[i])));
   }
-  while (data_blocks.size() > 1)
+  while (nodes.size() > 1)
   {
     /*
      * 1. Combine hashes for the first 2 elements. Pop the first 2 elements from the nodes array.
